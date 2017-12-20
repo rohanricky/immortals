@@ -1,0 +1,16 @@
+{
+    "name": "immortals",
+    "description": "A node server",
+    "authors": "Rohan",
+    "version": "0.0.1",
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "dotenv": "^4.0.0",
+        "express": "^4.16.2",
+        "python-shell": "^0.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.13.3"
+    }
+}
