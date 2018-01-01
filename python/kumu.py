@@ -11,7 +11,7 @@ class Socket:
         self.message_length=message_length
 
     def connect(self):
-        self.sock.connect(('your-ip-address',port))
+        self.sock.connect(('192.168.43.167',7823))
 
     def sendtoserver(self,msg):
         total_sent=0
@@ -21,8 +21,8 @@ class Socket:
             if sent==0:
                 break
             total_sent+=sent
-        print("Task Accomplished")
         self.sock.close()
+        return "Task Accomplished"
 
     def receive(self):
         chunks=[]
@@ -41,9 +41,9 @@ def main(data):
         data=data.split(' ',1)[1]
         x=Socket(2048)
         x.connect()
-        x.sendtoserver(data)
-        x.receive()
-    else:print(data)
+        y=x.sendtoserver(data.encode())
+        return y
+    else:return data
 
 if __name__=='__main__':
     data=sys.argv[1]
